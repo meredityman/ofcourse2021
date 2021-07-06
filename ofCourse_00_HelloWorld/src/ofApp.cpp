@@ -18,13 +18,21 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofLogNotice("ofApp::draw") << "Draw";
 
-	ofSetColor(ofColor::white);
-	ofDrawRectangle(0.0, 0.0, ofGetWidth(), ofGetHeight() );
+	
+	float body_w = 200;
+	float body_h = 30;
 
-	ofSetColor( ofColor::red );
-	ofDrawCircle(0.0, 0.0, 10);
-	ofDrawCircle(100, 0.0, 10);
-	ofDrawCircle(0.0, 100.0, 10);
+
+	// Draw Head
+
+	// Draw Body
+	ofDrawRectangle(0.0, 0.0, body_w, body_w);
+
+
+	// Draw Legs
+
+
+	// Draw Tail
 
 
 }

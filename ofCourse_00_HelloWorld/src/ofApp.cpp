@@ -22,9 +22,11 @@ void ofApp::draw(){
 	ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
 
 		int legs_n = 10;
+		int tail_n = 10;
 
 		float head_w = 40.0;
 		float body_w = 200.0;
+		float tail_w = 200.0;
 		float body_h = 30.0;
 
 
@@ -52,8 +54,19 @@ void ofApp::draw(){
 			ofDrawRectangle(head_w + leg_seg * i, body_h, leg_seg * 0.3, body_h);
 		}
 
-
 		// Draw Tail
+		for (int i = 0; i < tail_n; i++) {
+			float tail_seg = tail_w / tail_n;
+
+			float x = (float)i / (tail_n - 1.0);
+			ofLogNotice() << x;
+
+			ofColor tailColor = ofColor::purple;		
+
+			ofSetColor(tailColor.lerp(ofColor::pink, x));
+
+			ofDrawRectangle(head_w + body_w + tail_seg * i, 0.0, tail_seg, body_h * ( 1.0 - x));
+		}
 
 	ofPopMatrix();
 

@@ -9,7 +9,7 @@ void ofApp::setup() {
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	ofSetWindowTitle( ofToString( ofGetFrameRate() ));
+	ofSetWindowTitle( ofToString( ofGetFrameRate() ) );
 
 	ofLogNotice("ofApp::update") << "Update";
 }
@@ -17,6 +17,14 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	ofLogNotice("ofApp::draw") << "Draw";
+
+	ofSetColor(ofColor::white);
+	ofDrawRectangle(0.0, 0.0, ofGetWidth(), ofGetHeight() );
+
+	ofSetColor( ofColor::red );
+	ofDrawCircle(0.0, 0.0, 10);
+	ofDrawCircle(100, 0.0, 10);
+	ofDrawCircle(0.0, 100.0, 10);
 
 
 }

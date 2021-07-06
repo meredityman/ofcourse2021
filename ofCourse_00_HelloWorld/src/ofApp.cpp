@@ -21,20 +21,37 @@ void ofApp::draw(){
 	ofPushMatrix();
 	ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
 
-		float head_w = 40;
-		float body_w = 200;
-		float body_h = 30;
+		int legs_n = 10;
+
+		float head_w = 40.0;
+		float body_w = 200.0;
+		float body_h = 30.0;
 
 
 		// Draw Head
 		ofSetColor(ofColor::red);
 		ofDrawRectangle(0.0, 0.0, head_w, body_h);
+		
+
+		ofSetColor(ofColor::antiqueWhite);
+		ofDrawCircle(0.0, 0.0, body_h * 0.75);
+
+		ofSetColor(ofColor::black);
+		ofDrawCircle(0.0, 0.0, body_h * 0.25);
+
 
 		// Draw Body
 		ofSetColor(ofColor::green);
 		ofDrawRectangle(head_w, 0.0, body_w, body_h);
 
 		// Draw Legs
+		ofSetColor(ofColor::black);
+		for (int i = 0; i < legs_n; i++) {
+			float leg_seg = body_w / legs_n;
+
+			ofDrawRectangle(head_w + leg_seg * i, body_h, leg_seg * 0.3, body_h);
+		}
+
 
 		// Draw Tail
 

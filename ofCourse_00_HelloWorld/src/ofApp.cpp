@@ -18,21 +18,27 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofLogNotice("ofApp::draw") << "Draw";
 
-	
-	float body_w = 200;
-	float body_h = 30;
+	ofPushMatrix();
+	ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
+
+		float head_w = 40;
+		float body_w = 200;
+		float body_h = 30;
 
 
-	// Draw Head
+		// Draw Head
+		ofSetColor(ofColor::red);
+		ofDrawRectangle(0.0, 0.0, head_w, body_h);
 
-	// Draw Body
-	ofDrawRectangle(0.0, 0.0, body_w, body_w);
+		// Draw Body
+		ofSetColor(ofColor::green);
+		ofDrawRectangle(head_w, 0.0, body_w, body_h);
 
+		// Draw Legs
 
-	// Draw Legs
+		// Draw Tail
 
-
-	// Draw Tail
+	ofPopMatrix();
 
 
 }

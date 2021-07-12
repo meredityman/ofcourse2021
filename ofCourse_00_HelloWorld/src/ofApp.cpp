@@ -19,7 +19,7 @@ void ofApp::draw(){
 	ofLogNotice("ofApp::draw") << "Draw";
 
 	ofPushMatrix();
-	ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
+		ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
 
 		int legs_n = 10;
 		int tail_n = 10;
@@ -59,7 +59,6 @@ void ofApp::draw(){
 			float tail_seg = tail_w / tail_n;
 
 			float x = (float)i / (tail_n - 1.0);
-			ofLogNotice() << x;
 
 			ofColor tailColor = ofColor::purple;		
 
@@ -70,60 +69,5 @@ void ofApp::draw(){
 
 	ofPopMatrix();
 
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
 }

@@ -49,6 +49,7 @@ __Inspirational Artists__:
 __Technical Resource__:
 * [Cpp Reference](https://en.cppreference.com/w/)
 * [The Cherno](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
+* [Dev Docs](https://devdocs.io/cpp/)
 
 __Watch/Read__: 
 

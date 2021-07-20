@@ -1,11 +1,13 @@
-[Week 1]('#Week 1')
-[Week 2]('#Week 2')
-[Week 3]('#Week 3')
-[Week 4]('#Week 4')
-[Week 5]('#Week 5')
-[Week 6]('#Week 6')
-[Week 7]('#Week 7')
-[Week 8]('#Week 8')
+## Contents
+
+[Week 1](#week-1)<br>
+[Week 2](#week-2)<br>
+[Week 3](#week-3)<br>
+[Week 4](#week-4)<br>
+[Week 5](#week-5)<br>
+[Week 6](#week-6)<br>
+[Week 7](#week-7)<br>
+[Week 8](#week-8)<br>
 
 
 ## Week 1
@@ -20,7 +22,7 @@
 ### Assignments
 
 * Change some parameters in the sketch and experiment with the results.
-* Use some of the openFrameworks draw functions to add to the sketch.
+* Make a fish!
 
 ### Reference
 
@@ -28,6 +30,7 @@ __Inspirational Artists__:
 * _
 
 __Technical Resources__: 
+
 * [OpenFrameworks](https://openframeworks.cc/)
 * [ofBook](https://openframeworks.cc/ofBook/chapters/foreword.html)
 
@@ -35,12 +38,14 @@ __Watch/Read__:
 * [What is Generative Art? Complexity Theory as a Context for Art Theory](http://philipgalanter.com/downloads/ga2003_what_is_genart.pdf)
 
 __GitHub Links__:
-* ofCourse_01_HelloWorld
+
+[ofCourse_00_HelloWorld]("./ofCourse_00_HelloWorld")
 
 
 ## Week 2
 
 ### Content
+
 * Back-to-basics with C++: basic types, syntax, functions variables and classes, etc...
 * What is a compiler and why does it hate me?
 * Loops and conditional logic.
@@ -50,31 +55,34 @@ __GitHub Links__:
 
 ### Assignments
 
-* Add some flying creatures to the sketch by creating another class that inherits from `Animal`.
+* Use `ofRandom` to randomize the parameters of the creature!
 
 ### Reference
+
 __Inspirational Artists__: 
 * Chris Sugrue, _Delicate Boundaries_ [link](http://csugrue.com/delicateboundaries/)
 
 __Technical Resource__:
-* [Cpp Reference](https://en.cppreference.com/w/)
-* [The Cherno](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
-* [Dev Docs](https://devdocs.io/cpp/)
+[Cpp Reference](https://en.cppreference.com/w/)<br>
+[The Cherno](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)<br>
+[Dev Docs](https://devdocs.io/cpp/)<br>
 
 __Watch/Read__: 
 
-* Alan Zucconi - [The AI of Creatures](https://www.alanzucconi.com/2020/07/27/the-ai-of-creatures/)
-* Aaron Penne - [Bugs in My Code - Process of Making Generative Creatures](https://vimeo.com/305833459)
+Alan Zucconi - [The AI of Creatures](https://www.alanzucconi.com/2020/07/27/the-ai-of-creatures/)<br>
+Aaron Penne - [Bugs in My Code - Process of Making Generative Creatures](https://vimeo.com/305833459)<br>
 
 
 __GitHub Links__:
-[ ] - ofCourse_02_CppIntro
-[-] - ofCourse_02_CppCritters
+
+[ofCourse_01_CppScratchPad]("./ofCourse_01_CppScratchPad")<br>
+[ofCourse_01_Critters]("./ofCourse_01_Critters")<br>
 
 
 ## Week 3
 
 ### Content
+
 * Introduction to storing and displaying image on computers.
 * Classes and inheritance.
 * Loading, saving images and displaying images in openFrameworks
@@ -89,31 +97,31 @@ __GitHub Links__:
 ### Reference
 
 __Artist__: 
-* [Mark Napier](https://www.marknapier.com/)
+
+[Mark Napier](https://www.marknapier.com/)
 
 __Technical Resource__:
 
 __Watch/Read__: 
-* Rosa Menkman [Glitch Studies Manifesto](https://amodern.net/wp-content/uploads/2016/05/2010_Original_Rosa-Menkman-Glitch-Studies-Manifesto.pdf)
+
+Rosa Menkman [Glitch Studies Manifesto](https://amodern.net/wp-content/uploads/2016/05/2010_Original_Rosa-Menkman-Glitch-Studies-Manifesto.pdf)
 
 __GitHub Links__:
-[-] - ofCourse_03_CompressionTest
-[-] - ofCourse_03_PixelSorting
+
+[ofCourse_02_Critters]("./ofCourse_02_Critters")<br>
+ofCourse_02_CompressionTest<br>
+ofCourse_02_PixelSorting<br>
 
 
 ## Week 4
 
 ### Content
-Using Git and Github
-Finding and using addons
-
-Using shaders and fbos to make more complex effects.
-
-Grabbing screenshots and making documentation easy.
-
-Loading videos and accessing the webcam.
-
-Implementing a buffered shader effect.
+* Using Git and Github
+* Finding and using addons
+* Using shaders and fbos to make more complex effects.
+* Grabbing screenshots and making documentation easy.
+* Loading videos and accessing the webcam.
+* Implementing a buffered shader effect.
 
 ### Assignments
 
@@ -122,32 +130,34 @@ Implementing a buffered shader effect.
 ### Reference
 
 __Artist__: 
-* [Nam June Paik](https://www.youtube.com/watch?v=yMUJB5aFvdo)
+
+[Nam June Paik](https://www.youtube.com/watch?v=yMUJB5aFvdo)
 
 __Technical Resource__:
-* [GitHub Guides](https://guides.github.com/activities/hello-world/)
-* [Git documentation](https://git-scm.com/docs/gittutorial)
-* [The Book of Shaders](https://thebookofshaders.com/)
-* [Shader Toy](https://www.shadertoy.com/)
+
+[GitHub Guides](https://guides.github.com/activities/hello-world/)<br>
+[Git documentation](https://git-scm.com/docs/gittutorial)<br>
+[The Book of Shaders](https://thebookofshaders.com/)<br>
+[Shader Toy](https://www.shadertoy.com/)<br>
 
 __Watch/Read__:
-* Alan Succoni - [GPU Pixel Sorting](https://www.alanzucconi.com/2017/12/13/gpu-sorting-1/)
 
-__GitHub Links__:
-[ ] - ofCourse_05_ShaderSandbox
-[ ] - ofCourse_04_VideoBuffer
+Alan Succoni - [GPU Pixel Sorting](https://www.alanzucconi.com/2017/12/13/gpu-sorting-1/)
+
+<!-- __GitHub Links__:
+
+ofCourse_03_ShaderSandbox<br>
+ofCourse_03_VideoBuffer<br> -->
 
 ## Week 5
 
 ### Content
 
-Making our own addons.
-
-Building a GUI the easy way.
-Using parameters with events.
-Introduction to the event system.
-
-Using ofImGui for more advanced interfaces.
+* Making our own addons.
+* Building a GUI the easy way.
+* Using parameters with events.
+* Introduction to the event system.
+* Using ofImGui for more advanced interfaces.
 
 ### Assignments
 
@@ -155,26 +165,29 @@ Using ofImGui for more advanced interfaces.
 
 ### Reference
 
-__Artist__: https://zkm.de/de/the-critical-engineering-manifesto
+__Artist__: 
+
+[The Critical Engineering Manifesto](https://zkm.de/de/the-critical-engineering-manifesto)
 
 __Technical Resource__:
 
-__Watch/Read__: TempleOS 
-https://www.bbc.co.uk/programmes/m000b4r3
+__Watch/Read__:
 
-__GitHub Links__:
+[TempleOS](https://www.bbc.co.uk/programmes/m000b4r3)
+
+<!-- __GitHub Links__:
 [ ] - ofCourse_05_PixelSortingApp
-[ ] - ofCourse_05_VideoBlenderApp
+[ ] - ofCourse_05_VideoBlenderApp -->
 
 ## Week 6
 
 
 ### Content
-Loading and displaying 3D models.
-Using shaders to create lighting effects. 
-3D transforms and vectors.
-Using the camera.
-Rendering videos.
+* Loading and displaying 3D models.
+* Using shaders to create lighting effects. 
+* 3D transforms and vectors.
+* Using the camera.
+* Rendering videos.
 
 ### Assignments
 
@@ -183,17 +196,20 @@ Rendering videos.
 ### Reference
 
 __Artist__: 
-* [Ian Cheng](http://iancheng.com/)
+
+[Ian Cheng](http://iancheng.com/)
 
 __Technical Resource__:
-* [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+
+[3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
 
 __Watch/Read__: 
-* Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v=QN39W020LqU&list=PLFt_AvWsXl0cONs3T0By4puYy6GM22ko8)
 
-__GitHub Links__:
+Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v=QN39W020LqU&list=PLFt_AvWsXl0cONs3T0By4puYy6GM22ko8)
+
+<!-- __GitHub Links__:
 [ ] - ofCourse_06_GenerativeMesh
-[ ] - ofCourse_06_MeshShader
+[ ] - ofCourse_06_MeshShader -->
 
 
 ## Week 7
@@ -219,23 +235,20 @@ __Technical Resource__:
 __Watch/Read__:
 https://www.moma.org/calendar/exhibitions/2686
 
-__GitHub Links__:
+<!-- __GitHub Links__:
 
 [ ] - ofCourse_07_WeatherVisualizer
-[ ] - ofCourse_07_PythonInterop
+[ ] - ofCourse_07_PythonInterop -->
 
-## Week 8
+<!-- ## Week 8
 
 ### Content
 
-Introduction to machine learning in graphical computing.
-
-Machine Learning example with runway
-
-Native Machinelearning example?
+* Introduction to machine learning in graphical computing.
+* Machine Learning example with runway?
+* Native Machinelearning example?
 
 ### Assignments
-
 
 
 ### Reference
@@ -247,4 +260,4 @@ __Technical Resource__:
 __Watch/Read__: https://www.e-flux.com/journal/101/273221/three-thousand-years-of-algorithmic-rituals-the-emergence-of-ai-from-the-computation-of-space/
 
 __GitHub Links__:
-[ ] - ofCourse_08_SuperResolution
+[ ] - ofCourse_08_SuperResolution -->

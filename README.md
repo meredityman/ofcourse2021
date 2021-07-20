@@ -32,7 +32,7 @@ __Technical Resources__: <br>
 __Watch/Read__: <br>
 [What is Generative Art? Complexity Theory as a Context for Art Theory](http://philipgalanter.com/downloads/ga2003_what_is_genart.pdf)<br>
 __GitHub Links__:<br>
-[ofCourse_00_HelloWorld]("./ofCourse_00_HelloWorld")
+[ofCourse_00_HelloWorld](ofCourse_00_HelloWorld)
 
 ---
 
@@ -63,8 +63,8 @@ __Watch/Read__: <br>
 Alan Zucconi - [The AI of Creatures](https://www.alanzucconi.com/2020/07/27/the-ai-of-creatures/)<br>
 Aaron Penne - [Bugs in My Code - Process of Making Generative Creatures](https://vimeo.com/305833459)<br>
 __GitHub Links__:<br>
-[ofCourse_01_CppScratchPad]("./ofCourse_01_CppScratchPad")<br>
-[ofCourse_01_Critters]("./ofCourse_01_Critters")<br>
+[ofCourse_01_CppScratchPad](ofCourse_01_CppScratchPad)<br>
+[ofCourse_01_Critters](ofCourse_01_Critters)<br>
 
 ---
 
@@ -90,7 +90,7 @@ __Artist__: <br>
 __Watch/Read__: <br>
 Rosa Menkman [Glitch Studies Manifesto](https://amodern.net/wp-content/uploads/2016/05/2010_Original_Rosa-Menkman-Glitch-Studies-Manifesto.pdf)<br>
 __GitHub Links__:<br>
-[ofCourse_02_Critters]("./ofCourse_02_Critters")<br>
+[ofCourse_02_Critters](ofCourse_02_Critters)<br>
 ofCourse_02_CompressionTest<br>
 ofCourse_02_PixelSorting<br>
 

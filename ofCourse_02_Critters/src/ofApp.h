@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "critter.h"
 
 class ofApp : public ofBaseApp{
 
@@ -9,4 +10,7 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 		
+		void keyPressed(int key);
+
+		Critter critter;
 };

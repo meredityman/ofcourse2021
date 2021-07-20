@@ -5,11 +5,11 @@ Critter::Critter(){
     tail_n = 10;
 
     head_w = ofRandom(40.0, 30);
-    body_w = ofRandom(100, 600.0);
-    tail_w = ofRandom(100, 200.0);
+    body_w = ofRandom(100, 300.0);
+    tail_w = ofRandom(100, 300.0);
     body_h = ofRandom(10, 30.0);
 
-    eye_h = 20;	
+    eye_h = ofRandom(body_h * 0.5, 1.2 * body_h);
 
 
     primary    = ofColor(
@@ -29,7 +29,8 @@ Critter::Critter(){
 void Critter::draw(){
     ofPushMatrix();
 
-        ofTranslate(ofGetWidth() * 0.5, ofGetHeight() * 0.5);
+        ofTranslate(node.getX(), node.getY());
+        
         ofTranslate(-1.0 * (head_w + body_w * 0.5), -2.0 * body_h);
 
         drawHead();
@@ -44,11 +45,19 @@ void Critter::drawHead(){
     ofSetColor(secondary);
     ofDrawRectangle(0.0, 0.0, head_w, body_h);
 
+    glm::vec2  mousePos    = glm::vec2(ofGetMouseX(), ofGetMouseY());
+    glm::vec2  eyePosition = glm::vec2(node.getX(), node.getY());
+    glm::vec2  mouseDirection = mousePos - eyePosition;
+    mouseDirection = glm::normalize(mouseDirection);
+
+    ofLogNotice("Critter::drawHead") << mousePos.x << ", " << mousePos.y;
+
     ofSetColor(ofColor::antiqueWhite);
-    ofDrawCircle(0.0, 0.0, eye_h * 0.75);
+    ofDrawCircle(0.0, 0.0, eye_h);
+
 
     ofSetColor(ofColor::black);
-    ofDrawCircle(0.0, 0.0, eye_h * 0.25); 
+    ofDrawCircle(mouseDirection.x * eye_h * 0.5, mouseDirection.y * eye_h * 0.5, eye_h * 0.25); 
 };
 void Critter::drawBody(){
     ofSetColor(primary);
@@ -80,6 +89,10 @@ void Critter::drawTail(){
             head_w + body_w + tail_seg * i,
             (body_h - size.y) * 0.5            
         );
+
+        float offset = pow(x, 2.4) * body_h * sin( 0.01 * ofGetElapsedTimeMillis() + x );
+
+        pos.y += offset;
 
         ofDrawRectangle( pos.x, pos.y, size.x, size.y);
     }

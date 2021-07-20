@@ -27,4 +27,6 @@ public:
 	ofColor primary;
 	ofColor secondary;
 
+	ofNode node;
+
 };

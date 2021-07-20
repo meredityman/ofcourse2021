@@ -36,7 +36,7 @@ __GitHub Links__:
 * Loops and conditional logic.
 * Standard library features, vectors, maps etc...
 * How can we use classes to encapsulate concepts.
-* Classes and inheritance.
+
 
 ### Assignments
 
@@ -66,6 +66,7 @@ __GitHub Links__:
 
 ### Content
 * Introduction to storing and displaying image on computers.
+* Classes and inheritance.
 * Loading, saving images and displaying images in openFrameworks
 * Working with pixels and textures.
 * Getting user input in openFrameworks.

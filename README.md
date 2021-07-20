@@ -26,21 +26,15 @@
 
 ### Reference
 
-__Inspirational Artists__: 
-* _
-
-__Technical Resources__: 
-
-* [OpenFrameworks](https://openframeworks.cc/)
-* [ofBook](https://openframeworks.cc/ofBook/chapters/foreword.html)
-
-__Watch/Read__: 
-* [What is Generative Art? Complexity Theory as a Context for Art Theory](http://philipgalanter.com/downloads/ga2003_what_is_genart.pdf)
-
-__GitHub Links__:
-
+__Technical Resources__: <br>
+[OpenFrameworks](https://openframeworks.cc/)<br>
+[ofBook](https://openframeworks.cc/ofBook/chapters/foreword.html)<br>
+__Watch/Read__: <br>
+[What is Generative Art? Complexity Theory as a Context for Art Theory](http://philipgalanter.com/downloads/ga2003_what_is_genart.pdf)<br>
+__GitHub Links__:<br>
 [ofCourse_00_HelloWorld]("./ofCourse_00_HelloWorld")
 
+---
 
 ## Week 2
 
@@ -59,25 +53,20 @@ __GitHub Links__:
 
 ### Reference
 
-__Inspirational Artists__: 
-* Chris Sugrue, _Delicate Boundaries_ [link](http://csugrue.com/delicateboundaries/)
-
-__Technical Resource__:
+__Inspirational Artists__: <br>
+Chris Sugrue, _Delicate Boundaries_ [link](http://csugrue.com/delicateboundaries/)<br>
+__Technical Resource__:<br>
 [Cpp Reference](https://en.cppreference.com/w/)<br>
 [The Cherno](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)<br>
 [Dev Docs](https://devdocs.io/cpp/)<br>
-
-__Watch/Read__: 
-
+__Watch/Read__: <br>
 Alan Zucconi - [The AI of Creatures](https://www.alanzucconi.com/2020/07/27/the-ai-of-creatures/)<br>
 Aaron Penne - [Bugs in My Code - Process of Making Generative Creatures](https://vimeo.com/305833459)<br>
-
-
-__GitHub Links__:
-
+__GitHub Links__:<br>
 [ofCourse_01_CppScratchPad]("./ofCourse_01_CppScratchPad")<br>
 [ofCourse_01_Critters]("./ofCourse_01_Critters")<br>
 
+---
 
 ## Week 3
 
@@ -96,22 +85,17 @@ __GitHub Links__:
 
 ### Reference
 
-__Artist__: 
-
-[Mark Napier](https://www.marknapier.com/)
-
-__Technical Resource__:
-
-__Watch/Read__: 
-
-Rosa Menkman [Glitch Studies Manifesto](https://amodern.net/wp-content/uploads/2016/05/2010_Original_Rosa-Menkman-Glitch-Studies-Manifesto.pdf)
-
-__GitHub Links__:
-
+__Artist__: <br>
+[Mark Napier](https://www.marknapier.com/)<br>
+__Watch/Read__: <br>
+Rosa Menkman [Glitch Studies Manifesto](https://amodern.net/wp-content/uploads/2016/05/2010_Original_Rosa-Menkman-Glitch-Studies-Manifesto.pdf)<br>
+__GitHub Links__:<br>
 [ofCourse_02_Critters]("./ofCourse_02_Critters")<br>
 ofCourse_02_CompressionTest<br>
 ofCourse_02_PixelSorting<br>
 
+
+---
 
 ## Week 4
 
@@ -129,25 +113,23 @@ ofCourse_02_PixelSorting<br>
 
 ### Reference
 
-__Artist__: 
-
-[Nam June Paik](https://www.youtube.com/watch?v=yMUJB5aFvdo)
-
-__Technical Resource__:
-
+__Artist__: <br>
+[Nam June Paik](https://www.youtube.com/watch?v=yMUJB5aFvdo)<br>
+__Technical Resource__:<br>
 [GitHub Guides](https://guides.github.com/activities/hello-world/)<br>
 [Git documentation](https://git-scm.com/docs/gittutorial)<br>
 [The Book of Shaders](https://thebookofshaders.com/)<br>
 [Shader Toy](https://www.shadertoy.com/)<br>
-
-__Watch/Read__:
-
+__Watch/Read__:<br>
 Alan Succoni - [GPU Pixel Sorting](https://www.alanzucconi.com/2017/12/13/gpu-sorting-1/)
 
 <!-- __GitHub Links__:
 
 ofCourse_03_ShaderSandbox<br>
 ofCourse_03_VideoBuffer<br> -->
+
+
+---
 
 ## Week 5
 
@@ -165,19 +147,17 @@ ofCourse_03_VideoBuffer<br> -->
 
 ### Reference
 
-__Artist__: 
-
-[The Critical Engineering Manifesto](https://zkm.de/de/the-critical-engineering-manifesto)
-
-__Technical Resource__:
-
-__Watch/Read__:
-
+__Artist__: <br>
+[The Critical Engineering Manifesto](https://zkm.de/de/the-critical-engineering-manifesto)<br>
+__Watch/Read__:<br>
 [TempleOS](https://www.bbc.co.uk/programmes/m000b4r3)
 
 <!-- __GitHub Links__:
 [ ] - ofCourse_05_PixelSortingApp
 [ ] - ofCourse_05_VideoBlenderApp -->
+
+
+---
 
 ## Week 6
 
@@ -195,22 +175,19 @@ __Watch/Read__:
 
 ### Reference
 
-__Artist__: 
+__Artist__: <br>
 
-[Ian Cheng](http://iancheng.com/)
-
-__Technical Resource__:
-
-[3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
-
-__Watch/Read__: 
-
-Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v=QN39W020LqU&list=PLFt_AvWsXl0cONs3T0By4puYy6GM22ko8)
+[Ian Cheng](http://iancheng.com/)<br>
+__Technical Resource__:<br>
+[3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)<br>
+__Watch/Read__: <br>
+Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v=QN39W020LqU&list=PLFt_AvWsXl0cONs3T0By4puYy6GM22ko8)<br>
 
 <!-- __GitHub Links__:
 [ ] - ofCourse_06_GenerativeMesh
 [ ] - ofCourse_06_MeshShader -->
 
+---
 
 ## Week 7
 
@@ -226,19 +203,17 @@ Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v
 
 ### Reference
 
-__Artist__: 
-* [Julian Oliver](https://www.digitalartarchive.at/database/general/work/packet-garden.html)
-
-__Technical Resource__:
-
-
-__Watch/Read__:
-https://www.moma.org/calendar/exhibitions/2686
+__Artist__: <br>
+[Julian Oliver](https://www.digitalartarchive.at/database/general/work/packet-garden.html)<br>
+__Watch/Read__:<br>
+[Information (MoMA)](https://www.moma.org/calendar/exhibitions/2686)<br>
 
 <!-- __GitHub Links__:
 
 [ ] - ofCourse_07_WeatherVisualizer
-[ ] - ofCourse_07_PythonInterop -->
+[ ] - ofCourse_07_PythonInterop
+
+---  -->
 
 <!-- ## Week 8
 

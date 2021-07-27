@@ -41,14 +41,13 @@ void ofApp::draw(){
 	}
 
 
-	screenGrab.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
-	std::ostringstream fileName;
-
-
-	// ffmpeg -i  bin/data/frames/frame_%04d.jpg bin/data/out.mp4
-	fileName << "frames/" << "frame_" << ofToString(screenGrabIndex++, 4, '0') << ".jpg";
-
-	screenGrab.save(fileName.str());
+	// Code to save frames
+	//screenGrab.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
+	//std::ostringstream fileName;
+	//// ffmpeg -i  bin/data/frames/frame_%04d.jpg bin/data/out.mp4
+	//fileName << "frames/" << "frame_" << ofToString(screenGrabIndex++, 4, '0') << ".jpg";
+	//
+	//screenGrab.save(fileName.str());
 }
 
 

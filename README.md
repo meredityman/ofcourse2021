@@ -72,16 +72,13 @@ __GitHub Links__:<br>
 
 ### Content
 
-* Introduction to storing and displaying image on computers.
-* Classes and inheritance.
-* Loading, saving images and displaying images in openFrameworks
-* Working with pixels and textures.
-* Getting user input in openFrameworks.
+* Using randomness for Generative Design
+* Using time to animate objects
+
 
 ### Assignments
 
-* Implement diagonal pixel sorting by adding another case.
-* Experiment with other stop and start conditions.
+* Use the vector class to draw multiple bugs at the same time
 
 ### Reference
 
@@ -101,16 +98,16 @@ https://www.wolframalpha.com/
 ## Week 4
 
 ### Content
-* Using Git and Github
-* Finding and using addons
-* Using shaders and fbos to make more complex effects.
-* Grabbing screenshots and making documentation easy.
-* Loading videos and accessing the webcam.
-* Implementing a buffered shader effect.
+* Introduction to storing and displaying image on computers.
+* Classes and inheritance.
+* Loading, saving images and displaying images in openFrameworks
+* Working with pixels and textures.
+* Getting user input in openFrameworks.
 
 ### Assignments
 
-* Pick a shader from ShaderToy and try to implement it in openFrameworks.
+* Implement diagonal pixel sorting by adding another case.
+* Experiment with other stop and start conditions.
 
 ### Reference
 
@@ -124,18 +121,25 @@ __Technical Resource__:<br>
 __Watch/Read__:<br>
 Alan Succoni - [GPU Pixel Sorting](https://www.alanzucconi.com/2017/12/13/gpu-sorting-1/)
 
-<!-- __GitHub Links__:
+__GitHub Links__:
 
 ofCourse_03_ShaderSandbox<br>
-ofCourse_03_VideoBuffer<br> -->
+ofCourse_03_VideoBuffer<br>
 
-
+<!-- 
 ---
 
 ## Week 5
 
 ### Content
 
+* Using Git and Github
+* Finding and using addons
+* Using shaders and fbos to make more complex effects.
+* Grabbing screenshots and making documentation easy.
+* Loading videos and accessing the webcam.
+* Implementing a buffered shader effect.
+* Pick a shader from ShaderToy and try to implement it in openFrameworks.
 * Making our own addons.
 * Building a GUI the easy way.
 * Using parameters with events.
@@ -153,9 +157,9 @@ __Artist__: <br>
 __Watch/Read__:<br>
 [TempleOS](https://www.bbc.co.uk/programmes/m000b4r3)
 
-<!-- __GitHub Links__:
+__GitHub Links__:
 [ ] - ofCourse_05_PixelSortingApp
-[ ] - ofCourse_05_VideoBlenderApp -->
+[ ] - ofCourse_05_VideoBlenderApp
 
 
 ---
@@ -184,9 +188,9 @@ __Technical Resource__:<br>
 __Watch/Read__: <br>
 Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v=QN39W020LqU&list=PLFt_AvWsXl0cONs3T0By4puYy6GM22ko8)<br>
 
-<!-- __GitHub Links__:
+__GitHub Links__:
 [ ] - ofCourse_06_GenerativeMesh
-[ ] - ofCourse_06_MeshShader -->
+[ ] - ofCourse_06_MeshShader
 
 ---
 
@@ -209,14 +213,14 @@ __Artist__: <br>
 __Watch/Read__:<br>
 [Information (MoMA)](https://www.moma.org/calendar/exhibitions/2686)<br>
 
-<!-- __GitHub Links__:
+__GitHub Links__:
 
 [ ] - ofCourse_07_WeatherVisualizer
 [ ] - ofCourse_07_PythonInterop
 
----  -->
+--- 
 
-<!-- ## Week 8
+## Week 8
 
 ### Content
 

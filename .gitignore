@@ -48,7 +48,9 @@ xcuserdata
 *.ilk
 *.aps
 ipch/
-
+*.VC*
+*.sln
+*.vcxproj*
 
 # VS Code
 *.vscode

@@ -1,6 +1,9 @@
 #include "critter.h"
 
 Critter::Critter(){
+
+    period = ofRandom(1000, 6000);
+
     legs_n = 10;
     tail_n = 10;
 

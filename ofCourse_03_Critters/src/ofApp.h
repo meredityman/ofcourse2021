@@ -12,5 +12,8 @@ class ofApp : public ofBaseApp{
 		
 		void keyPressed(int key);
 
-		Critter critter;
+
+		int numCritters = 20;
+
+		std::vector<Critter> critters;
 };

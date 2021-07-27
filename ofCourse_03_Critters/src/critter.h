@@ -14,6 +14,8 @@ public:
     void drawLegs();
     void drawTail();
 
+	float period;
+
 	int legs_n;
 	int tail_n;
 

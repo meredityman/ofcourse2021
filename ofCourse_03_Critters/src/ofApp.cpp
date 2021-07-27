@@ -28,7 +28,6 @@ void ofApp::update(){
 		critterPosition.x -= ofGetWidth() * fmod((float)ofGetElapsedTimeMillis(), critters[i].period) / critters[i].period;
 
   		critters[i].node.setPosition(critterPosition);
-
 	}
 }
 
@@ -36,7 +35,6 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofLogNotice("ofApp::draw") << "Draw";
     ofSetBackgroundColor(ofColor::mediumSeaGreen);
-
 
 	for (int i = 0; i < critters.size(); i++) {
 		critters[i].draw();
@@ -46,8 +44,16 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+	if (key == 'r') {
+		for (int i = 0; i < critters.size(); i++) {
+			critters[i] = Critter();
+		}
+	} else if (key == ' ') {
+		screenGrab.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
 
-	for (int i = 0; i < critters.size(); i++) {
-		critters[i] = Critter();
+		std::ostringstream fileName;
+		fileName << "screenGrab_" << screenGrabIndex++ << ".jpg";
+
+		screenGrab.save(fileName.str());
 	}
 };

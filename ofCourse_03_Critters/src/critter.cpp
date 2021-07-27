@@ -53,7 +53,7 @@ void Critter::drawHead(){
     glm::vec2  mouseDirection = mousePos - eyePosition;
     mouseDirection = glm::normalize(mouseDirection);
 
-    ofLogNotice("Critter::drawHead") << mousePos.x << ", " << mousePos.y;
+    //ofLogNotice("Critter::drawHead") << mousePos.x << ", " << mousePos.y;
 
     ofSetColor(ofColor::antiqueWhite);
     ofDrawCircle(0.0, 0.0, eye_h);

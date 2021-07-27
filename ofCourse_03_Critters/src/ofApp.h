@@ -16,4 +16,7 @@ class ofApp : public ofBaseApp{
 		int numCritters = 20;
 
 		std::vector<Critter> critters;
+
+		ofImage screenGrab;
+		int screenGrabIndex = 0;
 };

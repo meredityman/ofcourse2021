@@ -39,6 +39,16 @@ void ofApp::draw(){
 	for (int i = 0; i < critters.size(); i++) {
 		critters[i].draw();
 	}
+
+
+	screenGrab.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
+	std::ostringstream fileName;
+
+
+	// ffmpeg -i  bin/data/frames/frame_%04d.jpg bin/data/out.mp4
+	fileName << "frames/" << "frame_" << ofToString(screenGrabIndex++, 4, '0') << ".jpg";
+
+	screenGrab.save(fileName.str());
 }
 
 
@@ -52,7 +62,7 @@ void ofApp::keyPressed(int key){
 		screenGrab.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
 
 		std::ostringstream fileName;
-		fileName << "screenGrab_" << screenGrabIndex++ << ".jpg";
+		fileName  << "screenGrabs/" << "screenGrab_" << screenGrabIndex++ << ".jpg";
 
 		screenGrab.save(fileName.str());
 	}

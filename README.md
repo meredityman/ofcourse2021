@@ -121,18 +121,44 @@ __Technical Resource__:<br>
 __Watch/Read__:<br>
 Alan Succoni - [GPU Pixel Sorting](https://www.alanzucconi.com/2017/12/13/gpu-sorting-1/)
 
-__GitHub Links__:
+__GitHub Links__: <br>
+[ofCourse_03_Critters](ofCourse_03_Critters)<br>
+[ofCourse_03_PixelSorter](ofCourse_03_PixelSorter)<br>
 
-ofCourse_03_ShaderSandbox<br>
-ofCourse_03_VideoBuffer<br>
 
-<!-- 
 ---
 
 ## Week 5
 
 ### Content
+* Using `ofParameter`.
+* Working with arrays of pixels.
+* Building a pixel sorter.
+* Adding parameter listeners.
+* Using the `dragEvent`
 
+
+### Assignments
+
+* Rewrite the pixel sorter app to sort columns of pixels, not rows.
+* Add code to wsave the images you make and share some.
+
+### Reference
+
+__Artist__: <br>
+[Refik Anadol](https://refikanadol.com/)
+__Resource__:<br>
+[gallery-dl](https://github.com/mikf/gallery-dl)
+__GitHub Links__:
+[ofCourse_03_PixelSorter](ofCourse_03_PixelSorter)
+
+---
+<!-- 
+
+## Week 6
+
+
+### Content
 * Using Git and Github
 * Finding and using addons
 * Using shaders and fbos to make more complex effects.
@@ -145,29 +171,6 @@ ofCourse_03_VideoBuffer<br>
 * Using parameters with events.
 * Introduction to the event system.
 * Using ofImGui for more advanced interfaces.
-
-### Assignments
-
-* Don't do any coding. Make some art works with our new applications.
-
-### Reference
-
-__Artist__: <br>
-[The Critical Engineering Manifesto](https://zkm.de/de/the-critical-engineering-manifesto)<br>
-__Watch/Read__:<br>
-[TempleOS](https://www.bbc.co.uk/programmes/m000b4r3)
-
-__GitHub Links__:
-[ ] - ofCourse_05_PixelSortingApp
-[ ] - ofCourse_05_VideoBlenderApp
-
-
----
-
-## Week 6
-
-
-### Content
 * Loading and displaying 3D models.
 * Using shaders to create lighting effects. 
 * 3D transforms and vectors.
@@ -181,7 +184,7 @@ __GitHub Links__:
 ### Reference
 
 __Artist__: <br>
-
+[The Critical Engineering Manifesto](https://zkm.de/de/the-critical-engineering-manifesto)<br>
 [Ian Cheng](http://iancheng.com/)<br>
 __Technical Resource__:<br>
 [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)<br>
@@ -237,7 +240,11 @@ __Artist__:
 
 __Technical Resource__:
 
-__Watch/Read__: https://www.e-flux.com/journal/101/273221/three-thousand-years-of-algorithmic-rituals-the-emergence-of-ai-from-the-computation-of-space/
+__Watch/Read__: 
+https://www.e-flux.com/journal/101/273221/three-thousand-years-of-algorithmic-rituals-the-emergence-of-ai-from-the-computation-of-space/<br>
+[TempleOS](https://www.bbc.co.uk/programmes/m000b4r3)
 
 __GitHub Links__:
-[ ] - ofCourse_08_SuperResolution -->
+[ ] - ofCourse_08_SuperResolution
+
+ -->

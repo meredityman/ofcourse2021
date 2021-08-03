@@ -15,7 +15,7 @@ void ofApp::update(){
 
 	glm::vec3 critterPosition = glm::vec3(ofGetWidth(), ofGetHeight() * 0.5, 0.0);
 
-	critterPosition.x -= ofGetWidth() * (float)(ofGetElapsedTimeMillis() % 1000)/1000;
+	critterPosition.x -= ofGetWidth() * (float)(ofGetElapsedTimeMillis() % 2000)/2000;
 
     critter.node.setPosition(critterPosition ); 
 }
@@ -24,7 +24,6 @@ void ofApp::update(){
 void ofApp::draw(){
 	ofLogNotice("ofApp::draw") << "Draw";
     ofSetBackgroundColor(ofColor::mediumSeaGreen);
-
 
     critter.draw();
 }

@@ -54,15 +54,15 @@ void ofApp::process(){
     for( auto & row : pixels){
 
         std::vector<ofColor>::iterator start = row.begin();
-        std::vector<ofColor>::iterator end   = row.end();
 
         while( start++ < row.end() - 1){
             if( start->getBrightness() > lineThreshold.get()) break;
         }
 
-        // while( end-- > start){
-        //     if( start->getBrightness() < 100) break;
-        // }
+        std::vector<ofColor>::iterator end   = start;
+        while( end++ < row.end() - 1){
+            if( end->getBrightness() <  50) break;
+        }
 
 
         std::sort(start, end, [](ofColor a, ofColor b){

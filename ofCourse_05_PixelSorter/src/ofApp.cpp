@@ -2,9 +2,16 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    
+    ofDisableArbTex();
+
+    shader.load("shader.vert", "shader.frag");
 
     lineThreshold.set("Line Threshold", 200.0, 0.0, 255.0);
     lineThreshold.addListener(this, &ofApp::onProcess);
+
+    gui.setup();
+    gui.add(lineThreshold);
 
     inImg.load("default.jpg");
     process();
@@ -18,8 +25,13 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     if(outImg.isAllocated()){
+        shader.begin();
+        shader.setUniform1f("mouseX", (float)ofGetMouseX() /ofGetWidth());
         outImg.draw(0, 0);
+        shader.end();
     }
+
+    gui.draw();
 }
 
 //--------------------------------------------------------------

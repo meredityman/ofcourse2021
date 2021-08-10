@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -16,10 +17,13 @@ class ofApp : public ofBaseApp{
 		void keyPressed(int key);
 		void dragEvent(ofDragInfo dragInfo);
 
-		ofParameter<float> lineThreshold;
+		ofxPanel gui;
 
+		ofParameter<float> lineThreshold;
 
 		std::vector<std::vector<ofColor>> pixels;
 
 		ofImage inImg, outImg;
+
+		ofShader shader;
 };

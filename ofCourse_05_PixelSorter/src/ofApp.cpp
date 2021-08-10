@@ -4,7 +4,7 @@
 void ofApp::setup(){
 
     lineThreshold.set("Line Threshold", 200.0, 0.0, 255.0);
-    lineThreshold.addListener(this, &ofApp::onProcess); // What does this line do?
+    lineThreshold.addListener(this, &ofApp::onProcess);
 
     inImg.load("default.jpg");
     process();
@@ -44,8 +44,6 @@ void ofApp::process(){
         std::vector<ofColor>::iterator start = row.begin();
         std::vector<ofColor>::iterator end   = row.end();
 
-
-        // Why the "-1"??
         while( start++ < row.end() - 1){
             if( start->getBrightness() > lineThreshold.get()) break;
         }

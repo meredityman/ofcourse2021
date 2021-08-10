@@ -14,6 +14,7 @@ class ofApp : public ofBaseApp{
 		void process();
 		void onProcessFloat( float & val){ process();}
 		void onProcessBool( bool & val){ process();}
+		void onProcessInt( int & val){ process();}
 
 		void keyPressed(int key);
 		void dragEvent(ofDragInfo dragInfo);
@@ -21,6 +22,8 @@ class ofApp : public ofBaseApp{
 		ofParameter<float> lineThresholdStart;
 		ofParameter<float> lineThresholdEnd;
 		ofParameter<bool>  sortRows;
+		ofParameter<int>   sortType;
+		
 
 		ofxPanel gui;
 

@@ -13,11 +13,14 @@ void ofApp::setup(){
     sortRows.set("Sort Rows/Columns", true);
     sortRows.addListener(this, &ofApp::onProcessBool);
 
+    sortType.set("Sort type", 0, 0, 2);
+    sortType.addListener(this, &ofApp::onProcessInt);
 
     gui.setup();
     gui.add(lineThresholdStart);
     gui.add(lineThresholdEnd);
     gui.add(sortRows);
+    gui.add(sortType);
 
     inImg.load("default.jpg");
     process();
@@ -72,21 +75,63 @@ void ofApp::process(){
     for( auto & row : pixels){
 
         std::vector<ofColor>::iterator start = row.begin();
+        std::vector<ofColor>::iterator end;
 
-        while( start++ < row.end() - 1 ){
-            if( start->getBrightness() < lineThresholdStart.get()) break;
+        switch( sortType.get()){
+            // Brightness
+            case 0:
+                while( start++ < row.end() - 1 ){
+                    if( start->getBrightness() < lineThresholdStart.get()) break;
+                }
+
+                end   = start ;
+
+                while( end++ < row.end() - 1){
+                    if( end -> getBrightness() < lineThresholdEnd.get()) break;
+                }
+
+
+                std::sort(start, end, [](ofColor a, ofColor b){
+                    return a.getBrightness() < b.getBrightness();
+                });
+                break;
+            // Saturation
+            case 1:
+                while( start++ < row.end() - 1 ){
+                    if( start->getSaturation() < lineThresholdStart.get()) break;
+                }
+
+                end   = start ;
+
+                while( end++ < row.end() - 1){
+                    if( end -> getSaturation() < lineThresholdEnd.get()) break;
+                }
+
+
+                std::sort(start, end, [](ofColor a, ofColor b){
+                    return a.getSaturation() < b.getSaturation();
+                });
+                break;
+            // HUE
+            case 2:
+                while( start++ < row.end() - 1 ){
+                    if( start->getHue() < lineThresholdStart.get()) break;
+                }
+
+                end   = start ;
+
+                while( end++ < row.end() - 1){
+                    if( end -> getHue() < lineThresholdEnd.get()) break;
+                }
+
+
+                std::sort(start, end, [](ofColor a, ofColor b){
+                    return a.getHue() < b.getHue();
+                });
+                break;
         }
 
-        std::vector<ofColor>::iterator end   = start ;
 
-        while( end++ < row.end() - 1){
-            if( end -> getBrightness() < lineThresholdEnd.get()) break;
-        }
-
-
-        std::sort(start, end, [](ofColor a, ofColor b){
-            return a.getBrightness() < b.getBrightness();
-        });
     }
 
 

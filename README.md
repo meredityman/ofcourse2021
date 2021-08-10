@@ -150,10 +150,12 @@ __Artist__: <br>
 __Resource__:<br>
 [gallery-dl](https://github.com/mikf/gallery-dl)
 __GitHub Links__:
-[ofCourse_03_PixelSorter](ofCourse_03_PixelSorter)
+[ofCourse_04_PixelSorter](ofCourse_04_PixelSorter)
+
+__GitHub Links__: <br>
+[ofCourse_04_PixelSorter](ofCourse_04_PixelSorter)<br>
 
 ---
-<!-- 
 
 ## Week 6
 
@@ -163,23 +165,12 @@ __GitHub Links__:
 * Finding and using addons
 * Using shaders and fbos to make more complex effects.
 * Grabbing screenshots and making documentation easy.
-* Loading videos and accessing the webcam.
-* Implementing a buffered shader effect.
-* Pick a shader from ShaderToy and try to implement it in openFrameworks.
-* Making our own addons.
-* Building a GUI the easy way.
-* Using parameters with events.
 * Introduction to the event system.
-* Using ofImGui for more advanced interfaces.
-* Loading and displaying 3D models.
-* Using shaders to create lighting effects. 
-* 3D transforms and vectors.
-* Using the camera.
-* Rendering videos.
+
 
 ### Assignments
 
-* Add to our generative landscape and render a looped video.
+* 
 
 ### Reference
 
@@ -192,8 +183,11 @@ __Watch/Read__: <br>
 Sebastian Lague - [Procedural Planet Generation](https://www.youtube.com/watch?v=QN39W020LqU&list=PLFt_AvWsXl0cONs3T0By4puYy6GM22ko8)<br>
 
 __GitHub Links__:
-[ ] - ofCourse_06_GenerativeMesh
-[ ] - ofCourse_06_MeshShader
+[ofCourse_05_PixelSorter](ofCourse_05_PixelSorter)
+
+
+
+<!-- 
 
 ---
 
@@ -203,7 +197,18 @@ __GitHub Links__:
 * Accessing a web api from using ofURLFileLoader and ofxJson
 * Communicating between programmes using OSC.
 * Using ofSpout/ofSyphon with RunwayML
-
+* Loading videos and accessing the webcam.
+* Implementing a buffered shader effect.
+* Pick a shader from ShaderToy and try to implement it in openFrameworks.
+* Making our own addons.
+* Building a GUI the easy way.
+* Using parameters with events.
+* Using ofImGui for more advanced interfaces.
+* Loading and displaying 3D models.
+* Using shaders to create lighting effects. 
+* 3D transforms and vectors.
+* Using the camera.
+* Rendering videos.
 
 ### Assignments
 
@@ -217,7 +222,8 @@ __Watch/Read__:<br>
 [Information (MoMA)](https://www.moma.org/calendar/exhibitions/2686)<br>
 
 __GitHub Links__:
-
+[ ] - ofCourse_06_GenerativeMesh
+[ ] - ofCourse_06_MeshShader
 [ ] - ofCourse_07_WeatherVisualizer
 [ ] - ofCourse_07_PythonInterop
 

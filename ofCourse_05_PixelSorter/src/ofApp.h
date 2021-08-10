@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
+
 
 class ofApp : public ofBaseApp{
 
@@ -10,13 +12,17 @@ class ofApp : public ofBaseApp{
 		void draw();
 
 		void process();
-		void onProcess( float & val){ process();}
+		void onProcessFloat( float & val){ process();}
+		void onProcessBool( bool & val){ process();}
 
 		void keyPressed(int key);
 		void dragEvent(ofDragInfo dragInfo);
 
 		ofParameter<float> lineThresholdStart;
 		ofParameter<float> lineThresholdEnd;
+		ofParameter<bool>  sortRows;
+
+		ofxPanel gui;
 
 
 		std::vector<std::vector<ofColor>> pixels;

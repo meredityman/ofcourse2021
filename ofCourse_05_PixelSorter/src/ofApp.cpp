@@ -4,10 +4,20 @@
 void ofApp::setup(){
 
     lineThresholdStart.set("Line Threshold Start", 200.0, 0.0, 255.0);
-    lineThresholdStart.addListener(this, &ofApp::onProcess);
+    lineThresholdStart.addListener(this, &ofApp::onProcessFloat);
 
     lineThresholdEnd.set("Line Threshold End", 30.0, 0.0, 255.0);
-    lineThresholdEnd.addListener(this, &ofApp::onProcess);
+    lineThresholdEnd.addListener(this, &ofApp::onProcessFloat);
+
+
+    sortRows.set("Sort Rows/Columns", true);
+    sortRows.addListener(this, &ofApp::onProcessBool);
+
+
+    gui.setup();
+    gui.add(lineThresholdStart);
+    gui.add(lineThresholdEnd);
+    gui.add(sortRows);
 
     inImg.load("default.jpg");
     process();
@@ -23,6 +33,8 @@ void ofApp::draw(){
     if(outImg.isAllocated()){
         outImg.draw(0, 0);
     }
+
+    gui.draw();
 }
 
 //--------------------------------------------------------------
@@ -31,15 +43,30 @@ void ofApp::process(){
 
 
     // Filling pixels from the image
-    for( int y = 0; y < inImg.getHeight(); y++){
-        std::vector<ofColor> row;
-        for( int x = 0; x < inImg.getWidth(); x++){
-            ofColor col = inImg.getColor(x, y);
-            row.push_back(col);
-            //ofLogNotice("ofApp::process") << x << ", " << y << ": " << ofToString(col);
+    if( sortRows){
+        for( int y = 0; y < inImg.getHeight(); y++){
+            std::vector<ofColor> row;
+            for( int x = 0; x < inImg.getWidth(); x++){
+
+                ofColor col = inImg.getColor(x, y);
+                row.push_back(col);
+                //ofLogNotice("ofApp::process") << x << ", " << y << ": " << ofToString(col);
+            }
+            pixels.push_back(row);
         }
-        pixels.push_back(row);
+    } else {
+        for( int x = 0; x < inImg.getWidth(); x++){
+            std::vector<ofColor> column;
+            for( int y = 0; y < inImg.getHeight(); y++){
+
+                ofColor col = inImg.getColor(x, y);
+                column.push_back(col);
+                //ofLogNotice("ofApp::process") << x << ", " << y << ": " << ofToString(col);
+            }
+            pixels.push_back(column);
+        }  
     }
+
 
     // Filling pixels from the image
     for( auto & row : pixels){
@@ -47,7 +74,7 @@ void ofApp::process(){
         std::vector<ofColor>::iterator start = row.begin();
 
         while( start++ < row.end() - 1 ){
-            if( start->getBrightness() > lineThresholdStart.get()) break;
+            if( start->getBrightness() < lineThresholdStart.get()) break;
         }
 
         std::vector<ofColor>::iterator end   = start ;
@@ -65,12 +92,25 @@ void ofApp::process(){
 
     outImg.allocate(inImg.getWidth(), inImg.getHeight(), OF_IMAGE_COLOR);
 
-    for( int y = 0; y < outImg.getHeight(); y++){
-        std::vector<ofColor> & row = pixels[y];
+
+    if( sortRows){
+        for( int y = 0; y < outImg.getHeight(); y++){
+            std::vector<ofColor> & row = pixels[y];
+            for( int x = 0; x < outImg.getWidth(); x++){
+                ofColor col = row[x];
+                //ofLogNotice() << x << ", " << y << ": "<< col;
+                outImg.setColor(x, y, col);
+            }
+        }
+    } else {
         for( int x = 0; x < outImg.getWidth(); x++){
-            ofColor col = row[x];
-            //ofLogNotice() << x << ", " << y << ": "<< col;
-            outImg.setColor(x, y, col);
+            std::vector<ofColor> & column = pixels[x];
+            for( int y = 0; y < outImg.getHeight(); y++){
+
+                ofColor col = column[y];
+                //ofLogNotice() << x << ", " << y << ": "<< col;
+                outImg.setColor(x, y, col);
+            }
         }
     }
 

@@ -143,14 +143,14 @@ __GitHub Links__: <br>
 * Rewrite the pixel sorter app to sort columns of pixels, not rows.
 * Add code to wsave the images you make and share some.
 
+https://thebookofshaders.com/
+
 ### Reference
 
 __Artist__: <br>
 [Refik Anadol](https://refikanadol.com/)
 __Resource__:<br>
 [gallery-dl](https://github.com/mikf/gallery-dl)
-__GitHub Links__:
-[ofCourse_04_PixelSorter](ofCourse_04_PixelSorter)
 
 __GitHub Links__: <br>
 [ofCourse_04_PixelSorter](ofCourse_04_PixelSorter)<br>

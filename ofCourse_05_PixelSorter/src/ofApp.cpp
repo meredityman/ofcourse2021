@@ -3,8 +3,11 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-    lineThreshold.set("Line Threshold", 200.0, 0.0, 255.0);
-    lineThreshold.addListener(this, &ofApp::onProcess);
+    lineThresholdStart.set("Line Threshold Start", 200.0, 0.0, 255.0);
+    lineThresholdStart.addListener(this, &ofApp::onProcess);
+
+    lineThresholdEnd.set("Line Threshold End", 30.0, 0.0, 255.0);
+    lineThresholdEnd.addListener(this, &ofApp::onProcess);
 
     inImg.load("default.jpg");
     process();
@@ -42,15 +45,16 @@ void ofApp::process(){
     for( auto & row : pixels){
 
         std::vector<ofColor>::iterator start = row.begin();
-        std::vector<ofColor>::iterator end   = row.end();
 
-        while( start++ < row.end() - 1){
-            if( start->getBrightness() > lineThreshold.get()) break;
+        while( start++ < row.end() - 1 ){
+            if( start->getBrightness() > lineThresholdStart.get()) break;
         }
 
-        // while( end-- > start){
-        //     if( start->getBrightness() < 100) break;
-        // }
+        std::vector<ofColor>::iterator end   = start ;
+
+        while( end++ < row.end() - 1){
+            if( end -> getBrightness() < lineThresholdEnd.get()) break;
+        }
 
 
         std::sort(start, end, [](ofColor a, ofColor b){
@@ -75,15 +79,15 @@ void ofApp::process(){
 }
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if(key == '='){
-        lineThreshold = lineThreshold + 5;
-        lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
-    } else if (key == '-'){
-        lineThreshold = lineThreshold - 5;
-        lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
-    }
+    // if(key == '='){
+    //     lineThreshold = lineThreshold + 5;
+    //     lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
+    // } else if (key == '-'){
+    //     lineThreshold = lineThreshold - 5;
+    //     lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
+    // }
 
-    ofLogNotice("ofApp::keyPressed") << lineThreshold;
+    // ofLogNotice("ofApp::keyPressed") << lineThreshold;
 }
 
 

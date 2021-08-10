@@ -10,13 +10,13 @@ class ofApp : public ofBaseApp{
 		void draw();
 
 		void process();
-		void onProcess( float & val){ process();
-		}
+		void onProcess( float & val){ process();}
 
 		void keyPressed(int key);
 		void dragEvent(ofDragInfo dragInfo);
 
-		ofParameter<float> lineThreshold;
+		ofParameter<float> lineThresholdStart;
+		ofParameter<float> lineThresholdEnd;
 
 
 		std::vector<std::vector<ofColor>> pixels;

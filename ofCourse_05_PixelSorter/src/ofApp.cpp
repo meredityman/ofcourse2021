@@ -85,10 +85,7 @@ void ofApp::process(){
     for( auto & row : pixels){
 
         std::vector<ofColor>::iterator start = row.begin();
-<<<<<<< HEAD
-=======
         std::vector<ofColor>::iterator end;
->>>>>>> e9f3262c4816d4e6e668aba0bf0c6c921b2d214e
 
         switch( sortType.get()){
             // Brightness
@@ -114,11 +111,6 @@ void ofApp::process(){
                     if( start->getSaturation() < lineThresholdStart.get()) break;
                 }
 
-<<<<<<< HEAD
-        std::vector<ofColor>::iterator end   = start;
-        while( end++ < row.end() - 1){
-            if( end->getBrightness() <  50) break;
-=======
                 end   = start ;
 
                 while( end++ < row.end() - 1){
@@ -147,7 +139,6 @@ void ofApp::process(){
                     return a.getHue() < b.getHue();
                 });
                 break;
->>>>>>> e9f3262c4816d4e6e668aba0bf0c6c921b2d214e
         }
 
 

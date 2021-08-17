@@ -1,6 +1,8 @@
 #pragma once
 #include "ofMain.h"
+#include "ofxOsc.h"
 
+#define PORT 8000
 
 #define FONT_SIZE 128
 #define QUAD_SIZE (FONT_SIZE * 2.0)
@@ -11,8 +13,9 @@
 class characterObject {
 
 public:
-	characterObject(char c, const ofTrueTypeFont & font){
-
+	characterObject(char c, const ofTrueTypeFont & font, ofColor col){
+		
+		this->col = col;
 		characterPath = font.getCharacterAsPoints(c, false);
 
 		fbo.allocate(QUAD_SIZE, QUAD_SIZE, GL_RGBA);
@@ -41,7 +44,7 @@ public:
 			ofClear(0, 0, 0, 0);
 
 			ofPushStyle();
-				ofSetColor(ofColor::white);
+				ofSetColor(col);
 				characterPath.draw(PADDING, QUAD_SIZE * 0.5);
 			ofPopStyle();
 		fbo.end();
@@ -52,7 +55,7 @@ public:
 	}
 
 	ofPlanePrimitive plane;
-
+	ofColor col;
 	ofPath characterPath;
 	ofFbo fbo;
 
@@ -65,6 +68,7 @@ class ofApp : public ofBaseApp{
 	public:
 		void setup();
 		void update();
+		void processOsc();
 		void draw();
 
 		void keyPressed(int key);
@@ -82,6 +86,8 @@ class ofApp : public ofBaseApp{
 		vector<characterObject> characters;
 
 		ofTrueTypeFont font;
+
+		ofxOscReceiver receiver;
 
 
 		

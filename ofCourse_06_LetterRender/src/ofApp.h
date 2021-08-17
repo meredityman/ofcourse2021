@@ -1,23 +1,28 @@
 #pragma once
 #include "ofMain.h"
 
-#define QUAD_SIZE 128
+
+#define FONT_SIZE 128
+#define QUAD_SIZE (FONT_SIZE * 2.0)
+#define PADDING ((QUAD_SIZE - FONT_SIZE) * 0.5)
+#define CR_TIME 5000.0
+
 
 class characterObject {
 
 public:
 	characterObject(char c, const ofTrueTypeFont & font){
 
+		characterPath = font.getCharacterAsPoints(c, false);
 
 		fbo.allocate(QUAD_SIZE, QUAD_SIZE, GL_RGBA);
-
 
 		plane.set(QUAD_SIZE, QUAD_SIZE, 2, 2);
 		plane.resizeToTexture(fbo.getTexture());
 
 		position = glm::vec3(
-			ofGetWidth()  * 0.5,
-			ofGetHeight() * 0.5,
+			fmod(ofGetElapsedTimeMillis(), CR_TIME) / CR_TIME * ofGetWidth(),
+			ofGetHeight() * 0.1,
 			0
 		);
 	}
@@ -26,19 +31,18 @@ public:
 		plane.setPosition(position);
 
 		position.z -= 100 * ofGetLastFrameTime();
-		position.y -= 200 * ofGetLastFrameTime();
-
+		position.y += 200 * ofGetLastFrameTime();
 
 	}
 
 	void draw(){
 
 		fbo.begin();
-			ofClear(ofColor::magenta);
+			ofClear(0, 0, 0, 0);
 
 			ofPushStyle();
-				ofSetColor(ofColor::cyan);
-				ofDrawCircle(QUAD_SIZE * 0.5, QUAD_SIZE * 0.5,  QUAD_SIZE * 0.3);
+				ofSetColor(ofColor::white);
+				characterPath.draw(PADDING, QUAD_SIZE * 0.5);
 			ofPopStyle();
 		fbo.end();
 
@@ -49,6 +53,7 @@ public:
 
 	ofPlanePrimitive plane;
 
+	ofPath characterPath;
 	ofFbo fbo;
 
 	glm::vec3 position;

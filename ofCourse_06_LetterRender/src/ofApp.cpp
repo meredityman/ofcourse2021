@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    font.loadFont("KaushanScript-Regular.ttf", 24, true, true);
+    font.loadFont("KaushanScript-Regular.ttf", FONT_SIZE, true, true, true);
 }
 
 //--------------------------------------------------------------
@@ -15,7 +15,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    ofBackground(ofColor::black);
+    
     for( auto & character : characters){
         character.draw();
     }

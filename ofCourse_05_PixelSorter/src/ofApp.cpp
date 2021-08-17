@@ -7,8 +7,24 @@ void ofApp::setup(){
 
     shader.load("shader.vert", "shader.frag");
 
-    lineThreshold.set("Line Threshold", 200.0, 0.0, 255.0);
-    lineThreshold.addListener(this, &ofApp::onProcess);
+    lineThresholdStart.set("Line Threshold Start", 200.0, 0.0, 255.0);
+    lineThresholdStart.addListener(this, &ofApp::onProcessFloat);
+
+    lineThresholdEnd.set("Line Threshold End", 30.0, 0.0, 255.0);
+    lineThresholdEnd.addListener(this, &ofApp::onProcessFloat);
+
+
+    sortRows.set("Sort Rows/Columns", true);
+    sortRows.addListener(this, &ofApp::onProcessBool);
+
+    sortType.set("Sort type", 0, 0, 2);
+    sortType.addListener(this, &ofApp::onProcessInt);
+
+    gui.setup();
+    gui.add(lineThresholdStart);
+    gui.add(lineThresholdEnd);
+    gui.add(sortRows);
+    gui.add(sortType);
 
     gui.setup();
     gui.add(lineThreshold);
@@ -40,45 +56,125 @@ void ofApp::process(){
 
 
     // Filling pixels from the image
-    for( int y = 0; y < inImg.getHeight(); y++){
-        std::vector<ofColor> row;
-        for( int x = 0; x < inImg.getWidth(); x++){
-            ofColor col = inImg.getColor(x, y);
-            row.push_back(col);
-            //ofLogNotice("ofApp::process") << x << ", " << y << ": " << ofToString(col);
+    if( sortRows){
+        for( int y = 0; y < inImg.getHeight(); y++){
+            std::vector<ofColor> row;
+            for( int x = 0; x < inImg.getWidth(); x++){
+
+                ofColor col = inImg.getColor(x, y);
+                row.push_back(col);
+                //ofLogNotice("ofApp::process") << x << ", " << y << ": " << ofToString(col);
+            }
+            pixels.push_back(row);
         }
-        pixels.push_back(row);
+    } else {
+        for( int x = 0; x < inImg.getWidth(); x++){
+            std::vector<ofColor> column;
+            for( int y = 0; y < inImg.getHeight(); y++){
+
+                ofColor col = inImg.getColor(x, y);
+                column.push_back(col);
+                //ofLogNotice("ofApp::process") << x << ", " << y << ": " << ofToString(col);
+            }
+            pixels.push_back(column);
+        }  
     }
+
 
     // Filling pixels from the image
     for( auto & row : pixels){
 
         std::vector<ofColor>::iterator start = row.begin();
+<<<<<<< HEAD
+=======
+        std::vector<ofColor>::iterator end;
+>>>>>>> e9f3262c4816d4e6e668aba0bf0c6c921b2d214e
 
-        while( start++ < row.end() - 1){
-            if( start->getBrightness() > lineThreshold.get()) break;
-        }
+        switch( sortType.get()){
+            // Brightness
+            case 0:
+                while( start++ < row.end() - 1 ){
+                    if( start->getBrightness() < lineThresholdStart.get()) break;
+                }
 
+                end   = start ;
+
+                while( end++ < row.end() - 1){
+                    if( end -> getBrightness() < lineThresholdEnd.get()) break;
+                }
+
+
+                std::sort(start, end, [](ofColor a, ofColor b){
+                    return a.getBrightness() < b.getBrightness();
+                });
+                break;
+            // Saturation
+            case 1:
+                while( start++ < row.end() - 1 ){
+                    if( start->getSaturation() < lineThresholdStart.get()) break;
+                }
+
+<<<<<<< HEAD
         std::vector<ofColor>::iterator end   = start;
         while( end++ < row.end() - 1){
             if( end->getBrightness() <  50) break;
+=======
+                end   = start ;
+
+                while( end++ < row.end() - 1){
+                    if( end -> getSaturation() < lineThresholdEnd.get()) break;
+                }
+
+
+                std::sort(start, end, [](ofColor a, ofColor b){
+                    return a.getSaturation() < b.getSaturation();
+                });
+                break;
+            // HUE
+            case 2:
+                while( start++ < row.end() - 1 ){
+                    if( start->getHue() < lineThresholdStart.get()) break;
+                }
+
+                end   = start ;
+
+                while( end++ < row.end() - 1){
+                    if( end -> getHue() < lineThresholdEnd.get()) break;
+                }
+
+
+                std::sort(start, end, [](ofColor a, ofColor b){
+                    return a.getHue() < b.getHue();
+                });
+                break;
+>>>>>>> e9f3262c4816d4e6e668aba0bf0c6c921b2d214e
         }
 
 
-        std::sort(start, end, [](ofColor a, ofColor b){
-            return a.getBrightness() < b.getBrightness();
-        });
     }
 
 
     outImg.allocate(inImg.getWidth(), inImg.getHeight(), OF_IMAGE_COLOR);
 
-    for( int y = 0; y < outImg.getHeight(); y++){
-        std::vector<ofColor> & row = pixels[y];
+
+    if( sortRows){
+        for( int y = 0; y < outImg.getHeight(); y++){
+            std::vector<ofColor> & row = pixels[y];
+            for( int x = 0; x < outImg.getWidth(); x++){
+                ofColor col = row[x];
+                //ofLogNotice() << x << ", " << y << ": "<< col;
+                outImg.setColor(x, y, col);
+            }
+        }
+    } else {
         for( int x = 0; x < outImg.getWidth(); x++){
-            ofColor col = row[x];
-            //ofLogNotice() << x << ", " << y << ": "<< col;
-            outImg.setColor(x, y, col);
+            std::vector<ofColor> & column = pixels[x];
+            for( int y = 0; y < outImg.getHeight(); y++){
+
+                ofColor col = column[y];
+                //ofLogNotice() << x << ", " << y << ": "<< col;
+                outImg.setColor(x, y, col);
+            }
         }
     }
 
@@ -87,15 +183,15 @@ void ofApp::process(){
 }
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if(key == '='){
-        lineThreshold = lineThreshold + 5;
-        lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
-    } else if (key == '-'){
-        lineThreshold = lineThreshold - 5;
-        lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
-    }
+    // if(key == '='){
+    //     lineThreshold = lineThreshold + 5;
+    //     lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
+    // } else if (key == '-'){
+    //     lineThreshold = lineThreshold - 5;
+    //     lineThreshold = ofClamp(lineThreshold, lineThreshold.getMin(), lineThreshold.getMax());
+    // }
 
-    ofLogNotice("ofApp::keyPressed") << lineThreshold;
+    // ofLogNotice("ofApp::keyPressed") << lineThreshold;
 }
 
 

@@ -1,7 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxOsc.h"
 
+
+#define PORT 12345
 
 #define CHAR_SIZE 64.0
 #define QUAD_SIZE (CHAR_SIZE * 1.5)
@@ -102,13 +105,19 @@ class ofApp : public ofBaseApp{
 		void setup();
 		void update();
 		void draw();
+		void processOsc();
 
 		void keyPressed(int key);
 		void keyReleased(int key);
+
+		void onRecievedChar(char c){
+			characters.push_back(characterObj(c, font));
+		}
 
 
 		vector<characterObj> characters;
 
 		ofTrueTypeFont  font;
+		ofxOscReceiver receiver;
 		
 };
